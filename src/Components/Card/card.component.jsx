@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Card = (props) => {
+export const Card = ({todo}) => {
     return(
-        <h1>{props.todos}</h1>
+        <h1>{todo.name}</h1>
     )
 }
