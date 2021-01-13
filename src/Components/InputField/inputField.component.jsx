@@ -3,7 +3,7 @@ import React from "react";
 import { RiBallPenLine } from "react-icons/ri";
 import { IconContext } from "react-icons";
 
-export const InputField = ({ placeHolder, handleChange,handlClick }) => {
+export const InputField = ({ placeHolder, handleChange,handlClick,currentTodo }) => {
   return (
     <div>
       <form noValidate autoComplete="off">
@@ -14,13 +14,12 @@ export const InputField = ({ placeHolder, handleChange,handlClick }) => {
           size="small"
           className="todo-input"
           onChange={handleChange}
+          value={currentTodo}
         />
         <IconContext.Provider
-          value={{ color: "blue", className: "global-class-name" }}
+          value={{className: "add-icon" }}
         >
-          <div>
-            <RiBallPenLine onClick={handlClick} />
-          </div>
+          <RiBallPenLine onClick={handlClick} />
         </IconContext.Provider>
       </form>
     </div>

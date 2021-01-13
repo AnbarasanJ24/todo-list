@@ -1,42 +1,67 @@
-import './App.css';
-import React from 'react';
-import { InputField } from './Components/InputField/inputField.component';
-import { CardList } from './Components/CardList/cardList.component';
+import "./App.css";
+import React from "react";
+import { InputField } from "./Components/InputField/inputField.component";
+import { CardList } from "./Components/CardList/cardList.component";
 
 class App extends React.Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-      todos: []
+      todos: [],
+      currentTodo: {
+        name: "",
+        key: "",
+      },
+    };
+  }
+
+  onInputChange = (event) => {
+    this.setState({
+      currentTodo: {
+        name: event.target.value,
+        key: Date.now(),
+      },
+    });
+  };
+
+  onAddNewTodo = () => {
+    const { currentTodo } = this.state;
+    console.log(currentTodo);
+    if (currentTodo.name !== "") {
+      const newTodos = [...this.state.todos, currentTodo];
+      this.setState({
+        todos: newTodos,
+        currentTodo: {
+          name: "",
+          key: "",
+        },
+      });
     }
-  }
-  todo = {}
+  };
 
-  handleChange = (event)=>{
-   this.todo = {
-      "name" : event.target.value
-    }
-  }
+  onDeleteTodo = (passedTodo) => {
+    let filteredTodo = this.state.todos.filter(todo => todo.name !== passedTodo.name);
+    this.setState({
+      todos: filteredTodo
+    });
+  };
 
-  handlClick = (event) =>{
-    this.state.todos.push(this.todo)
-    this.setState({})
-  }
-
-  render(){
-    const filteredTodo = this.state.todos.map(todo => todo);
-    console.log(filteredTodo)
+  render() {
+    const { todos: allTodos, currentTodo } = this.state;
     return (
       <main className="main-todo-list">
-        <section className="secton-todo-list">
-          <InputField placeHolder="Add Todo" handleChange={this.handleChange} handlClick={this.handlClick}/>
-          <CardList todos={filteredTodo} />
+        <section className="section-todo-list">
+          <InputField
+            placeHolder="Add Todo"
+            currentTodo={currentTodo.name}
+            handleChange={this.onInputChange}
+            handlClick={this.onAddNewTodo}
+          />
+          <CardList todos={allTodos} onDeleteTodo={this.onDeleteTodo} />
         </section>
       </main>
     );
   }
-  
-
 }
 
 export default App;
