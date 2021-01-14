@@ -32,11 +32,11 @@ class App extends React.Component {
         this.currentQuote = responseAllQuotes[randomNumber];
       });
 
-    if (this.state.todos.length <= 0) {
-      let state = JSON.parse(localStorage.getItem("state"));
-      let allTodos = state.todos;
-      this.setState({ todos: [...allTodos] });
-    }
+    // if (this.state.todos.length <= 0) {
+    //   let state = JSON.parse(localStorage.getItem("state"));
+    //   let allTodos = state.todos;
+    //   this.setState({ todos: [...allTodos] });
+    // }
   }
 
   onInputChange = (event) => {
@@ -68,7 +68,7 @@ class App extends React.Component {
     );
     this.setState({
       todos: filteredTodo,
-    }, ()=> {localStorage.setItem("state", JSON.stringify(this.state));});
+    }, ()=> {localStorage.setItem("state", JSON.stringify(this.state))});
   };
 
   render() {
