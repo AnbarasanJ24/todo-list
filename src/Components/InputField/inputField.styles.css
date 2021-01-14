@@ -1,7 +1,21 @@
 .todo-input{
-   margin-top: 5rem;
-   width: 100%;
+   width: 75%;
 }
 .add-icon{
-   background-color: brown;
+   font-size: 1.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    color:rebeccapurple;
 }
+
+.input-div{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+/* 
+.MuiFormLabel-root.Mui-focused{
+   color: red !important;
+   outline: red;
+} */
