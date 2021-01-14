@@ -8,7 +8,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   root: {
     width: "75%",
-  }
+    "font-family": "'Caveat', cursive",
+  },
 });
 export const InputField = ({ placeHolder, handleChange,handlClick,currentTodo }) => {
   const classes = useStyles();
@@ -24,8 +25,8 @@ export const InputField = ({ placeHolder, handleChange,handlClick,currentTodo })
             root: classes.root,
           }}
           onChange={handleChange}
+          onKeyUp={handleChange}
           value={currentTodo}
-         
         />
         <IconContext.Provider value={{ className: "add-icon" }}>
           <RiBallPenLine onClick={handlClick} />

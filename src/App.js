@@ -30,8 +30,13 @@ class App extends React.Component {
       .then((responseAllQuotes) => {
         const randomNumber = Math.floor(Math.random() * 1634 + 1);
         this.currentQuote = responseAllQuotes[randomNumber];
-         console.log(this.currentQuote);
       });
+
+    if (this.state.todos.length <= 0) {
+      let state = JSON.parse(localStorage.getItem("state"));
+      let allTodos = state.todos;
+      this.setState({ todos: [...allTodos] });
+    }
   }
 
   onInputChange = (event) => {
@@ -43,9 +48,8 @@ class App extends React.Component {
     });
   };
 
-  onAddNewTodo = () => {
+  onAddNewTodo = (event) => {
     const { currentTodo } = this.state;
-    console.log(currentTodo);
     if (currentTodo.name !== "") {
       const newTodos = [...this.state.todos, currentTodo];
       this.setState({
@@ -54,7 +58,7 @@ class App extends React.Component {
           name: "",
           key: "",
         },
-      });
+      }, () => {localStorage.setItem("state", JSON.stringify(this.state));});
     }
   };
 
@@ -64,7 +68,7 @@ class App extends React.Component {
     );
     this.setState({
       todos: filteredTodo,
-    });
+    }, ()=> {localStorage.setItem("state", JSON.stringify(this.state));});
   };
 
   render() {
@@ -72,7 +76,7 @@ class App extends React.Component {
     return (
       <main className="main-todo-list">
         <div className="title-div">
-          <h1 className="title">Todo List</h1>
+          <h1 className="title">Whats the plan for today?</h1>
         </div>
         <section className="parent-section">
           <section className="section-todo-list">
@@ -88,8 +92,8 @@ class App extends React.Component {
         <footer className="dailyQuotes">
           <div className="dailyQuotesCard">
             <h5 className="quote">
-              {this.currentQuote?.text}
-              <h6 className="author">{this.currentQuote?.author || "Quotes"}</h6>
+              {this.currentQuote?.text || "Quotes"}
+              <div className="author">{this.currentQuote?.author}</div>
             </h5>
           </div>
         </footer>
