@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/https///AnbarasanJ24.github.io/todo-list/static/css/main.638e41cc.chunk.css",
-    "main.js": "/https///AnbarasanJ24.github.io/todo-list/static/js/main.d6fe232b.chunk.js",
-    "main.js.map": "/https///AnbarasanJ24.github.io/todo-list/static/js/main.d6fe232b.chunk.js.map",
-    "runtime-main.js": "/https///AnbarasanJ24.github.io/todo-list/static/js/runtime-main.ebf0782a.js",
-    "runtime-main.js.map": "/https///AnbarasanJ24.github.io/todo-list/static/js/runtime-main.ebf0782a.js.map",
-    "static/js/2.b586d80c.chunk.js": "/https///AnbarasanJ24.github.io/todo-list/static/js/2.b586d80c.chunk.js",
-    "static/js/2.b586d80c.chunk.js.map": "/https///AnbarasanJ24.github.io/todo-list/static/js/2.b586d80c.chunk.js.map",
-    "static/js/3.00faf013.chunk.js": "/https///AnbarasanJ24.github.io/todo-list/static/js/3.00faf013.chunk.js",
-    "static/js/3.00faf013.chunk.js.map": "/https///AnbarasanJ24.github.io/todo-list/static/js/3.00faf013.chunk.js.map",
-    "index.html": "/https///AnbarasanJ24.github.io/todo-list/index.html",
-    "static/css/main.638e41cc.chunk.css.map": "/https///AnbarasanJ24.github.io/todo-list/static/css/main.638e41cc.chunk.css.map",
-    "static/js/2.b586d80c.chunk.js.LICENSE.txt": "/https///AnbarasanJ24.github.io/todo-list/static/js/2.b586d80c.chunk.js.LICENSE.txt"
+    "main.css": "/todo-list/static/css/main.638e41cc.chunk.css",
+    "main.js": "/todo-list/static/js/main.d6fe232b.chunk.js",
+    "main.js.map": "/todo-list/static/js/main.d6fe232b.chunk.js.map",
+    "runtime-main.js": "/todo-list/static/js/runtime-main.74622b3f.js",
+    "runtime-main.js.map": "/todo-list/static/js/runtime-main.74622b3f.js.map",
+    "static/js/2.b586d80c.chunk.js": "/todo-list/static/js/2.b586d80c.chunk.js",
+    "static/js/2.b586d80c.chunk.js.map": "/todo-list/static/js/2.b586d80c.chunk.js.map",
+    "static/js/3.00faf013.chunk.js": "/todo-list/static/js/3.00faf013.chunk.js",
+    "static/js/3.00faf013.chunk.js.map": "/todo-list/static/js/3.00faf013.chunk.js.map",
+    "index.html": "/todo-list/index.html",
+    "static/css/main.638e41cc.chunk.css.map": "/todo-list/static/css/main.638e41cc.chunk.css.map",
+    "static/js/2.b586d80c.chunk.js.LICENSE.txt": "/todo-list/static/js/2.b586d80c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ebf0782a.js",
+    "static/js/runtime-main.74622b3f.js",
     "static/js/2.b586d80c.chunk.js",
     "static/css/main.638e41cc.chunk.css",
     "static/js/main.d6fe232b.chunk.js"
